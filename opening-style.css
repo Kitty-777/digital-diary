@@ -1,0 +1,135 @@
+/* Opening page style */
+body{
+  background: #e0bbff;
+}
+.book-img {
+  height: 450px;
+  margin-left: 430px;
+  margin-top: 25px;
+  position: absolute;
+}
+.start-btn{
+  background: linear-gradient(45deg, #7a5cbb, #f056ee);
+  color: white;
+  padding: 10px 30px;
+  border: 1px solid rebeccapurple;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: monospace;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 30px;
+  margin-top: 20px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.start-btn:hover{
+  background: linear-gradient(45deg, #f056ee, #9373d6); /* Slightly darker purple on hover */
+  transform: scale(1.1); /* Slight zoom-in effect */
+  color: #f0e5ff; /* Light text color */
+  font-family: 'Segoes script',serif;
+  font-style: italic;
+  font-size: 17px;
+  padding: 12px 30px;
+}
+.opening-p{
+ font-family: 'Courier New', Courier, monospace;
+ font-style: oblique;
+ font-size: 30px;
+ font-weight: bold;
+ width: 295px;
+ line-height: 45px;
+ margin-left: 25px;
+}
+span{
+  color: orchid;
+  font-weight: bold;
+}
+/* Container for the toggle button */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 900px;
+}
+
+/* Toggle button */
+.toggle {
+  width: 50px;
+  height: 25px;
+  background-color: #4b0082; /* Default background */
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Circle inside the toggle */
+.toggle-circle {
+  width: 21px;
+  height: 21px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+/* Toggle active state (dark mode) */
+input[type="checkbox"]:checked + .toggle {
+  background-color: black; /* Purple for dark mode */
+}
+
+input[type="checkbox"]:checked + .toggle .toggle-circle {
+  background-color: orange;
+  transform: translateX(25px); /* Slide the circle to the right */
+} 
+/* Opening-page dark mode */
+body.dark-mode {
+  background: #ffcc04;
+}
+body.dark-mode .start-btn {
+  background: black;
+  color: white;
+  padding: 10px 30px;
+  border: 1px solid black;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: monospace;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+body.dark-mode .start-btn:hover {
+  background-color: rgb(46, 45, 45);
+  transform: scale(1.1); /* Slight zoom-in effect */
+  color: #f0e5ff; /* Light text color */
+  font-family: 'Segoes script',serif;
+  font-style: italic;
+  font-size: 17px;
+  padding: 12px 30px;;
+}
+body.dark-mode span{
+  color: rgb(248, 116, 21);
+  font-weight: bold;
+}
+/* Looking on mobile devises */
+@media (max-width: 600px) {
+  .opening-p{
+    max-width: 90%;
+    padding: 5px; 
+ }
+   .dark-mode-toggle {
+    margin-left: 0px;
+   }
+  .book-img {
+    height: 255px;
+    margin-left: 50px;
+    margin-top: 350px;
+  }
+
+ }

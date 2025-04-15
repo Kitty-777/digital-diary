@@ -1,0 +1,196 @@
+body {
+  background: rgb(243, 240, 246); 
+  font-family: Arial, sans-serif;
+  display: inline;
+  margin-top: 100px;
+  margin-left: 60px;
+}
+
+input[type="text"]:focus, textarea:focus {
+  border-color: #4b0082;
+  outline: none;
+  box-shadow: 0 0 5px rgba(75, 0, 130, 0.6);
+}
+
+
+h1 {
+  text-align: center;
+  color: #4b0082; 
+}
+
+form {
+  background-color: #e0bbff; 
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(114, 11, 199, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #7a5cbb;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #7a5cbb; 
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5a3c9a; 
+}
+
+#entries {
+  margin-top: 20px;
+}
+
+.entry {
+  background-color: #d5c6e0; 
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+  a{
+    text-decoration: none;
+    margin-left: 25px;
+  }
+
+/* Container for the toggle button */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 900px;
+}
+
+/* Toggle button */
+.toggle {
+  width: 50px;
+  height: 25px;
+  background-color: #4b0082; /* Default background */
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Circle inside the toggle */
+.toggle-circle {
+  width: 21px;
+  height: 21px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+/* Toggle active state (dark mode) */
+input[type="checkbox"]:checked + .toggle {
+  background-color: #ff8c00; /* Purple for dark mode */
+}
+
+input[type="checkbox"]:checked + .toggle .toggle-circle {
+  background-color: black;
+  transform: translateX(25px); /* Slide the circle to the right */
+} 
+
+@keyframes neonGlow {
+  0%, 100% {
+      box-shadow: 0 0 10px #ffa500, 0 0 20px #ff4500;
+  }
+  50% {
+      box-shadow: 0 0 20px #ff8c00, 0 0 30px #ffa500;
+  }
+}
+
+body.dark-mode .entry {
+  animation: neonGlow 1.5s infinite alternate;
+  margin-bottom: 35px;
+}
+
+/* Dark Mode (Orange Neon Theme) */
+body.dark-mode {
+  background-color: #000; /* Dark background */
+  color: #ffa500; /* Neon orange text */
+}
+
+body.dark-mode .entry {
+  background-color: #333; /* Darker background for entries */
+  color: #ffa550; /* Neon orange text */
+  box-shadow: 0 0 15px #ffa500; /* Orange neon glow */
+  max-width: 100%;
+  margin-left: 5px;
+}
+body.dark-mode form {
+ background: #ef9c37;
+ box-shadow: 0 0 10px #ff4500;
+ margin-bottom: 50px;
+}
+body.dark-mode button{
+  background-color: orangered;
+  color: black;
+}
+body.dark-mode button:hover {
+  background: rgb(255, 191, 0);
+}
+body.dark-mode h1 {
+  color: rgb(255, 191, 0);
+}
+body.dark-mode input[type="text"]:focus, body.dark-mode textarea:focus {
+  border: yellow;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px yellow;
+}
+body.dark-mode input, body.dark-mode textarea {
+  border-color: orange;
+  box-sizing: border-box;
+  box-shadow:0 0 5px orange;
+}
+body.dark-mode .dark-mode-back  {
+  height: 40px;
+  margin-left: 15px;
+}
+body.dark-mode .back-icon {
+  background-color: black;
+  cursor: pointer;
+}
+body.dark-mode .back{
+  width: 68px;
+  margin-left: 20px;
+  background: #ef9c37;
+  border: 5px solid black;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+ /* Looking on mobile devises */
+ @media (max-width: 600px) {
+  h1 {
+   font-size: 1.5em;
+   margin: 10px 0px;
+   margin-left: 15px;
+   max-width: 90%;
+ }
+ form{
+   padding: 13px;
+   max-width: 80%;
+ }
+ .opening-p{
+   max-width: 90%;
+   padding: 5px; 
+}
+  .dark-mode-toggle {
+   margin-left: 255px;
+  }
+
+}

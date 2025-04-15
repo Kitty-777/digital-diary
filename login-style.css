@@ -1,0 +1,193 @@
+body {
+  background-color: #f0e5ff; /* Light purple background */
+  font-family: Arial, sans-serif;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+h1 {
+  text-align: center;
+  color: #4b0082; /* Dark purple for headings */
+  font-size: 2em;
+}
+
+/* Form Styling */
+form {
+  background-color: #e0bbff; /* Light purple background for forms */
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Form width */
+  margin: auto;
+  text-align: center;
+}
+
+/* Input and Button Styling */
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #7a5cbb; /* Purple border */
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Submit Button Styling */
+button {
+  width: 100%;
+  background-color: #7a5cbb; /* Purple background */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #5a3c9a; /* Darker purple on hover */
+}
+
+/* Paragraph and Link Styling */
+p {
+  font-size: 14px;
+  color: #4b0082; /* Dark purple text */
+}
+
+a {
+  text-decoration: none;
+  color: #7a5cbb; /* Light purple link */
+}
+
+a:hover {
+  color: #4b0082; /* Dark purple link hover */
+}
+
+/* Input Focus Effect */
+form input:focus,
+form button:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(122, 92, 187, 0.7); /* Purple glow on focus */
+}
+
+/* Style for login and register page forms */
+form p {
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+  color: #7a5cbb; /* Light purple text for instructions */
+}
+
+form a {
+  color: #7a5cbb; /* Light purple */
+  font-weight: bold;
+}
+
+form a:hover {
+  color: #4b0082; /* Dark purple hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  form {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  button {
+    font-size: 14px;
+  }
+}
+/* Styling back arrow*/
+a{
+  text-decoration: none;
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+
+  form {
+    padding: 13px;
+    max-width: 80%;
+  }
+
+  input[type="text"], input[type="password"], textarea {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  .entry {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  /* Adjust back arrow size for mobile */
+  /* .back {
+    font-size: 20px;
+    top: 10px;
+    left: 10px;
+  } */
+}
+
+/* Dark Mode Style */
+ body.dark-mode {
+  background: black;
+ }
+ body.dark-mode .back{
+  width: 68px;
+  margin-left: 25px;
+  margin-top: 15px;
+  background: #ef9c37;
+  border: 5px solid black;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+body.dark-mode form {
+  background: #ef9c37;
+  box-shadow: 0 0 10px #ff4500;
+}
+body.dark-mode button{
+  background-color: orangered;
+  color: black;
+}
+body.dark-mode button:hover {
+  background: rgb(255, 191, 0);
+}
+body.dark-mode h1 {
+  color: rgb(255, 191, 0);
+}
+body.dark-mode input[type="text"]:focus, body.dark-mode input[type="password"]:focus {
+  border: yellow;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px yellow;
+}
+body.dark-mode input[type="text"], body.dark-mode input[type="password"] {
+  border-color: orange;
+  box-sizing: border-box;
+  box-shadow:0 0 10px orange;
+}
+body.dark-mode p {
+  color: rgb(61, 60, 60);
+}
+body.dark-mode a {
+  color: black;
+}
